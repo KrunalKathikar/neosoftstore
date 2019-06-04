@@ -1,0 +1,19 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="android:fontFamily">@font/gothammedium</item>
+        <item name="colorPrimary">@color/appBackGroundColor</item>
+        <item name="colorPrimaryDark">@color/appBackGroundColor</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="CursorTheme" parent="AppTheme">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/appBackGroundColor</item>
+        <item name="colorPrimaryDark">@color/appBackGroundColor</item>
+        <item name="colorAccent">@color/white</item>
+    </style>
+
+</resources>
