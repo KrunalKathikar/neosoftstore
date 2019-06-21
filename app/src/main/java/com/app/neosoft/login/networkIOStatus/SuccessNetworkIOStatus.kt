@@ -1,28 +1,31 @@
 package com.app.neosoft.NetworkIOStatus
 
+import com.app.neosoft.ProgressDialogFragment
 import com.app.neosoft.contract.IView
 import com.app.neosoft.contract.INetworkIOStatus
-import com.app.neosoft.ProgressDialogFragment
 import com.app.neosoft.entity.LoginResponse
-import retrofit2.Call
-import retrofit2.Response
 
-class SuccessNetworkIOStatus  : INetworkIOStatus {
+class SuccessNetworkIOStatus : INetworkIOStatus {
 
-    val call: Call<LoginResponse>
+    var response : LoginResponse? = null;
 
-    val response: Response<LoginResponse>
+    var code: Int = 0;
 
-    constructor(call: Call<LoginResponse>,
-        response: Response<LoginResponse>) {
-        this.call = call
+    var message : String = "";
+
+    constructor()
+
+    constructor(code: Int, message: String, response: LoginResponse?){
+        this.code = code
+        this.message = message
         this.response = response
     }
 
+
     override fun action(view: IView) {
         ProgressDialogFragment.dismiss(view.getAppCompactActivity())
-        when(response.code()){
-            401 -> view.getViewModel().message(response.message())
+        when(code){
+            401 -> view.getViewModel().message("Enter Valid Credentials.")
             200 -> ""
         }
     }

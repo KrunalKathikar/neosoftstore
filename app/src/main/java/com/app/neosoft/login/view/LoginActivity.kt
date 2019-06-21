@@ -29,7 +29,6 @@ class LoginActivity : AppCompatActivity(), IView {
 
 
         loginViewModel.ioStatus.observe(this, Observer { ioStatus ->
-
             ioStatus?.action(this@LoginActivity);
 
         })
@@ -44,15 +43,5 @@ class LoginActivity : AppCompatActivity(), IView {
     override fun getViewModel(): IViewModel {
         return loginViewModel
     }
-
-
-
-
-
-
-
-
-
-
 
 }

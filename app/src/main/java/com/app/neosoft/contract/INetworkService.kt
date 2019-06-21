@@ -1,4 +1,4 @@
-package com.app.neosoft.login.networkCallContract
+package com.app.neosoft.contract
 
 import com.app.neosoft.entity.LoginResponse
 import retrofit2.Call
@@ -6,7 +6,7 @@ import retrofit2.http.Field
 import retrofit2.http.FormUrlEncoded
 import retrofit2.http.POST
 
-interface INetworkLoginService {
+interface INetworkService {
 
     @FormUrlEncoded
     @POST("login")

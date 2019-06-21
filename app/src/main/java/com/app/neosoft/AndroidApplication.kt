@@ -6,8 +6,9 @@ import android.content.Context
 class AndroidApplication : Application() {
 
     companion object{
-        lateinit var context : Context
+        var context : Context? = null
     }
+
 
     override fun onCreate() {
         super.onCreate()
