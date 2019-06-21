@@ -34,7 +34,7 @@ abstract class AbsNetworkIO<RequestObj,ResponseObj> {
 
     abstract protected fun provideNoInternetIOStatus() : INetworkIOStatus
 
-    abstract protected fun provideHttpVendor() : Vendor<RequestObj>
+    abstract protected fun provideHttpVendor() : AbsVendor<RequestObj>
 
     abstract protected fun provideInternetManager() : InternetManager
 

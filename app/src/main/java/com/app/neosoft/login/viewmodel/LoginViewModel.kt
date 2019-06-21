@@ -7,7 +7,7 @@ import android.text.TextUtils
 import com.android.databinding.library.baseAdapters.BR
 import com.app.neosoft.contract.IViewModel
 import com.app.neosoft.contract.INetworkIOStatus
-import com.app.neosoft.login.httpcall.LoginNetworkIOImpl
+import com.app.neosoft.login.httpcallmanagement.LoginNetworkIOImpl
 import com.app.neosoft.entity.LoginRequest
 
 class LoginViewModel : BaseObservable(), IViewModel {

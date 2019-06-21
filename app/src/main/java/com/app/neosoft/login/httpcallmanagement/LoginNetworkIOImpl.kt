@@ -1,4 +1,4 @@
-package com.app.neosoft.login.httpcall
+package com.app.neosoft.login.httpcallmanagement
 
 import com.app.neosoft.contract.INetworkIOStatus
 import com.app.neosoft.NetworkIOStatus.*
@@ -6,7 +6,7 @@ import com.app.neosoft.contract.AbsNetworkIO
 import com.app.neosoft.entity.LoginRequest
 import com.app.neosoft.entity.LoginResponse
 import com.app.neosoft.utility.InternetManager
-import com.app.neosoft.contract.Vendor
+import com.app.neosoft.contract.AbsVendor
 
 class LoginNetworkIOImpl : AbsNetworkIO<LoginRequest, LoginResponse>() {
 
@@ -14,7 +14,7 @@ class LoginNetworkIOImpl : AbsNetworkIO<LoginRequest, LoginResponse>() {
         return NoInternetNetworkIOStatus()
     }
 
-    override fun provideHttpVendor(): Vendor<LoginRequest> {
+    override fun provideHttpVendor(): AbsVendor<LoginRequest> {
         return RetrofitVendor()
     }
 
